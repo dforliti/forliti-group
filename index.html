@@ -14,7 +14,7 @@
 :root{
   color-scheme: light;
   --bg:#F1F4F8; --surface:#FFFFFF; --surface-2:#E6EAF1; --surface-3:#F7F9FC;
-  --ink:#0B1220; --ink-2:#445063; --ink-3:#6E7A8C;
+  --ink:#0B1220; --ink-2:#445063; --ink-3:#5E6878;
   --line:#DADFE8; --line-2:#BEC6D4;
   --accent:#1D3F7A; --accent-2:#16305C; --accent-soft:#E9EEF8;
   --ok:#1F6B3E;
@@ -108,7 +108,10 @@ img{max-width:100%}
   padding:11px 17px; border-radius:2px; text-decoration:none; border:1px solid var(--accent);
   background:var(--accent); color:#fff; cursor:pointer;
 }
-:root[data-theme="dark"] .btn:not(.ghost), :root:not([data-theme="light"]) .btn:not(.ghost){color:#08121F}
+:root[data-theme="dark"] .btn:not(.ghost){color:#08121F}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .btn:not(.ghost){color:#08121F}
+}
 .btn.ghost{background:transparent; color:var(--ink); border-color:var(--line-2)}
 .btn.ghost:hover{border-color:var(--ink-3)}
 
